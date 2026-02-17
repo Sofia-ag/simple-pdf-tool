@@ -1,0 +1,10 @@
+flask
+pypdf
+pillow
+pdf2image
+reportlab
+pdfplumber
+python-docx
+python-pptx
+openpyxl
+gunicorn
