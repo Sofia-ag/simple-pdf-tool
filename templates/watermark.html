@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Compress PDF</title>
+<title>Watermark PDF</title>
 <style>
 body{font-family:Arial;margin:0;background:#fff7cc;}
 .header{padding:15px;border-bottom:1px solid #ccc;background:#fff3b0;}
@@ -11,8 +11,8 @@ body{font-family:Arial;margin:0;background:#fff7cc;}
 .container{padding:40px;text-align:center;}
 .card{max-width:520px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);padding:30px;}
 .icon{font-size:64px;}
-.btn{margin-top:20px;padding:12px 24px;font-size:16px;font-weight:bold;border:none;border-radius:8px;background:#845ef7;color:#fff;cursor:pointer;}
-.btn:hover{background:#7048e8;}
+.btn{margin-top:20px;padding:12px 24px;font-size:16px;font-weight:bold;border:none;border-radius:8px;background:#e8590c;color:#fff;cursor:pointer;}
+.btn:hover{background:#d9480f;}
 </style>
 </head>
 <body>
@@ -26,12 +26,13 @@ body{font-family:Arial;margin:0;background:#fff7cc;}
 </div>
 <div class="container">
   <div class="card">
-    <div class="icon">📉📄</div>
-    <h1>Compress PDF</h1>
-    <p>Reduce PDF size (basic compression).</p>
-    <form action="/compress" method="post" enctype="multipart/form-data">
-      <input type="file" name="pdf" required><br>
-      <button class="btn" type="submit">Compress PDF</button>
+    <div class="icon">💧📄</div>
+    <h1>Watermark PDF</h1>
+    <p>Add a text watermark to all pages.</p>
+    <form action="/watermark" method="post" enctype="multipart/form-data">
+      <input type="file" name="pdf" required><br><br>
+      <input type="text" name="text" placeholder="Watermark text" required><br>
+      <button class="btn" type="submit">Add Watermark</button>
     </form>
   </div>
 </div>
