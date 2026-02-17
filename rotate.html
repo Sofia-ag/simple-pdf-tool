@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rotate PDF</title>
+<style>
+body{font-family:Arial;margin:0;background:#fff7cc;}
+.header{padding:15px;border-bottom:1px solid #ccc;background:#fff3b0;}
+.title{font-size:32px;font-weight:bold;text-decoration:none;color:#000;}
+.tabs{margin-top:10px;}
+.tabs a{margin-right:18px;font-weight:bold;text-decoration:none;color:#333;}
+.container{padding:40px;text-align:center;}
+.card{max-width:520px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);padding:30px;}
+.icon{font-size:64px;}
+.btn{margin-top:20px;padding:12px 24px;font-size:16px;font-weight:bold;border:none;border-radius:8px;background:#20c997;color:#fff;cursor:pointer;}
+.btn:hover{background:#12b886;}
+</style>
+</head>
+<body>
+<div class="header">
+  <a class="title" href="/">Simple PDF Tool</a>
+  <div class="tabs">
+    <a href="/merge_page">Merge</a><a href="/split_page">Split</a><a href="/compress_page">Compress</a>
+    <a href="/rotate_page">Rotate</a><a href="/watermark_page">Watermark</a>
+    <a href="/img_to_pdf_page">Images→PDF</a><a href="/pdf_to_images_page">PDF→Images</a><a href="/convert_page">Convert</a>
+  </div>
+</div>
+<div class="container">
+  <div class="card">
+    <div class="icon">🔄📄</div>
+    <h1>Rotate PDF</h1>
+    <p>Rotate all pages by 90°, 180°, or 270°.</p>
+    <form action="/rotate" method="post" enctype="multipart/form-data">
+      <input type="file" name="pdf" required><br><br>
+      <select name="angle">
+        <option value="90">90°</option>
+        <option value="180">180°</option>
+        <option value="270">270°</option>
+      </select><br>
+      <button class="btn" type="submit">Rotate PDF</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

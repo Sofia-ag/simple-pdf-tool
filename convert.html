@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Convert PDF - Simple PDF Tool</title>
+<style>
+body{font-family:Arial;margin:0;background:#fff7cc;}
+.header{padding:15px;border-bottom:1px solid #ccc;background:#fff3b0;}
+.title{font-size:32px;font-weight:bold;text-decoration:none;color:#000;}
+.tabs{margin-top:10px;}
+.tabs a{margin-right:18px;font-weight:bold;text-decoration:none;color:#333;}
+.container{padding:40px;}
+.box{background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);padding:20px;margin-bottom:30px;}
+form{margin-bottom:15px;}
+button{padding:8px 16px;font-weight:bold;border:none;border-radius:6px;background:#1c7ed6;color:#fff;cursor:pointer;}
+button:hover{background:#1971c2;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a class="title" href="/">Simple PDF Tool</a>
+  <div class="tabs">
+    <a href="/merge_page">Merge</a>
+    <a href="/split_page">Split</a>
+    <a href="/compress_page">Compress</a>
+    <a href="/rotate_page">Rotate</a>
+    <a href="/watermark_page">Watermark</a>
+    <a href="/img_to_pdf_page">Images→PDF</a>
+    <a href="/pdf_to_images_page">PDF→Images</a>
+    <a href="/convert_page">Convert</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="box">
+    <h2>Convert to PDF</h2>
+
+    <form action="/office_to_pdf" method="post" enctype="multipart/form-data">
+      <strong>Word to PDF</strong><br>
+      <input type="file" name="file" accept=".doc,.docx" required>
+      <button type="submit">Convert</button>
+    </form>
+
+    <form action="/office_to_pdf" method="post" enctype="multipart/form-data">
+      <strong>PowerPoint to PDF</strong><br>
+      <input type="file" name="file" accept=".ppt,.pptx" required>
+      <button type="submit">Convert</button>
+    </form>
+
+    <form action="/office_to_pdf" method="post" enctype="multipart/form-data">
+      <strong>Excel to PDF</strong><br>
+      <input type="file" name="file" accept=".xls,.xlsx" required>
+      <button type="submit">Convert</button>
+    </form>
+
+    <form action="/office_to_pdf" method="post" enctype="multipart/form-data">
+      <strong>HTML to PDF</strong><br>
+      <input type="file" name="file" accept=".html,.htm" required>
+      <button type="submit">Convert</button>
+    </form>
+  </div>
+
+  <div class="box">
+    <h2>Convert from PDF</h2>
+
+    <form action="/pdf_to_word" method="post" enctype="multipart/form-data">
+      <strong>PDF to Word</strong><br>
+      <input type="file" name="pdf" accept=".pdf" required>
+      <button type="submit">Convert</button>
+    </form>
+
+    <form action="/pdf_to_ppt" method="post" enctype="multipart/form-data">
+      <strong>PDF to PowerPoint</strong><br>
+      <input type="file" name="pdf" accept=".pdf" required>
+      <button type="submit">Convert</button>
+    </form>
+
+    <form action="/pdf_to_excel" method="post" enctype="multipart/form-data">
+      <strong>PDF to Excel</strong><br>
+      <input type="file" name="pdf" accept=".pdf" required>
+      <button type="submit">Convert</button>
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
